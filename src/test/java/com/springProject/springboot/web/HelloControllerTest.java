@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
 
-    @Autowired // 스프링이 관리하는 Bean 주입입
+    @Autowired // 스프링이 관리하는 Bean 주입
    private MockMvc mvc;
 
     @Test
