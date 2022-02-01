@@ -32,6 +32,10 @@ public class Posts { // 실제 DB의 테이블과 매칭될 클래스 -> Entity 
 
     private String author;
 
+    /*
+    빌더 패턴 -> ex) StringBuilder
+    1. 어느 필드에 어떤 값을 채워야 할지 명확해짐
+     */
     @Builder // 생성자 대신 빌더 클래스
     public Posts(String title, String content, String author) {
         this.title = title;
@@ -40,7 +44,13 @@ public class Posts { // 실제 DB의 테이블과 매칭될 클래스 -> Entity 
     }
 
     /*
-    빌더 패턴 -> ex) StringBuilder
-    1. 어느 필드에 어떤 값을 채워야 할지 명확해짐
+        DB에 쿼리를 날리는 부분이 없음 -> JPA의 영속성 컨텍스트 때문
+        영속성 컨텍스트 : entity를 영구적으로 저장하는 환경 (논리적 개념)
+        영속성 컨텍스트가 유지된 상태에서 데이터 값을 변경하면
+        transaction이 끝나는 시점에 해당 테이블에 변경문이 반영된다. -> "터티 체킹"
      */
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
