@@ -1,5 +1,6 @@
 package com.springProject.springboot.domain.posts;
 
+import com.springProject.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts { // 실제 DB의 테이블과 매칭될 클래스 -> Entity Class
+public class Posts extends BaseTimeEntity { // 실제 DB의 테이블과 매칭될 클래스 -> Entity Class
     // JPA를 사용하면 DB의 데이터에 작업할 경우 실제 쿼리를 날리기보단, Entity 클래스를 수정함
     // 클래스의 카멜케이스 이름 -> 언더스토러 네이밍으로 테이블 이름을 매치
     // ex) SalesManager.java -> sales_manager table
