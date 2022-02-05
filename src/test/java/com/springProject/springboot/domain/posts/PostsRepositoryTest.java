@@ -45,6 +45,7 @@ public class PostsRepositoryTest {
         assertThat(posts.getContent()).isEqualTo(content);
     }
 
+    // BaseTimeEntity 사용 Test
     @Test
     public void BaseTimeEntity_등록() {
         //given

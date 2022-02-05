@@ -48,7 +48,7 @@ public class PostsApiControllerTest {
                 .content(content)
                 .author("author")
                 .build();
-        String url = "http://localhost:" + port + "/api/v1/posts";
+        String url = "http://localhost:" + port + "/api/v1/posts"; // API 호출
 
         // when
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
@@ -85,6 +85,7 @@ public class PostsApiControllerTest {
 
         // when
         ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
+        // 원래는 HttpMethod.PUT but 오류나서 POST로 변경
 
         // then
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
