@@ -27,6 +27,7 @@ public class IndexController {
         return "posts-save";
     }
 
+    // 호출되면 posts-update.mustache로 전환됌
     @GetMapping("/posts/update/{id}")
     public String postsUpdate(@PathVariable Long id, Model model) {
         PostsResponseDto dto = postsService.findById(id);
