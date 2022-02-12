@@ -3,5 +3,8 @@
 .idea
 build
 /build
-/build/
+/build/reports
+/build/test-results
+/build/classes
+/build/resources
 application-oauth.properties
