@@ -30,4 +30,5 @@ dependencies {
     implementation('com.h2database:h2')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-stater-oauth2-client') // 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
 }
