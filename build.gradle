@@ -31,4 +31,5 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     implementation('org.springframework.boot:spring-boot-starter-mustache')
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client') // 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
+    implementation('org.springframework.session:spring-session-jdbc')
 }

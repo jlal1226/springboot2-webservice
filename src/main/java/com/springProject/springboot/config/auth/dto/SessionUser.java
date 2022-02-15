@@ -2,11 +2,12 @@ package com.springProject.springboot.config.auth.dto;
 
 import com.springProject.springboot.domain.user.User;
 import lombok.Getter;
+import java.io.Serializable;
 
 // 세션에 사용자 정보를 저장하기 위한 Dto 클래스
 // 인증된 사용자 정보만 필요로함
 @Getter
-public class SessionUser {
+public class SessionUser implements Serializable{
     private String name;
     private String email;
     private String picture;
